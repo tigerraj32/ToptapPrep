@@ -22,7 +22,10 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
         /*
+         //Lesson 1
          NSUInteger naturalNumber = 12;
+         
+         NSLog(@"maximum binary count:%ld", [Itration BinaryGap:561892]);
          
          NSLog(@"Fibonacci Sequence %@", [Itration getFibonacciSeries:naturalNumber]);
          
@@ -36,6 +39,8 @@ int main(int argc, const char * argv[]) {
         
         
         /*
+         //Lesson 3
+         
          NSArray *A = @[@(-1),@(3),@(-4),@(5),@(1),@(-6),@(2),@(1)];
          NSNumber *sum = [A valueForKeyPath:@"@sum.self"];
          NSLog(@"%@",sum);
@@ -45,12 +50,11 @@ int main(int argc, const char * argv[]) {
          NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi:A]);
          */
         
-        /*
-         NSLog(@"maximum binary count:%ld", [Itration BinaryGap:561892]);
-         */
         
-        NSArray *A = @[@(3),@(2),@(3),@(2),@(4),@(5),@(6),@(5),@(6)];
-        [Array findOddOccurances:A];
+        
+        
+        NSArray *A = @[@(30000000000),@(2),@(30000000000),@(2),@(4),@(5),@(6),@(5),@(6)];
+        NSLog(@"%d",[Array findOddOccurances:A]);
         
         
     }

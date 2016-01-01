@@ -1,16 +1,16 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BAFC63CFD611671B86BD8717B417AD6F84657EDE",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D47FF8D4FE2A7F5B7A3EB2BD6FFC5F8EFFBD523F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "FF695CB7161E58BE84FB9EF0BF545A0BA34CCCFE" : 0,
-    "BAFC63CFD611671B86BD8717B417AD6F84657EDE" : 0
+    "D47FF8D4FE2A7F5B7A3EB2BD6FFC5F8EFFBD523F" : 0,
+    "FF695CB7161E58BE84FB9EF0BF545A0BA34CCCFE" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C2A156C3-4581-4EE6-B69F-DD9BF22B5E0C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "FF695CB7161E58BE84FB9EF0BF545A0BA34CCCFE" : "..",
-    "BAFC63CFD611671B86BD8717B417AD6F84657EDE" : "ToptalPrep\/"
+    "D47FF8D4FE2A7F5B7A3EB2BD6FFC5F8EFFBD523F" : "ToptalPrep\/",
+    "FF695CB7161E58BE84FB9EF0BF545A0BA34CCCFE" : ".."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ToptalPrep",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tigerraj32\/ToptalPrep.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BAFC63CFD611671B86BD8717B417AD6F84657EDE"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D47FF8D4FE2A7F5B7A3EB2BD6FFC5F8EFFBD523F"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/tigerraj32\/samples.git",
