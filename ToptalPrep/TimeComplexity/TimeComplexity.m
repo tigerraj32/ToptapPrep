@@ -10,7 +10,7 @@
 
 @implementation TimeComplexity
 
-#pragma mark -  Equi - 
+#pragma mark -  Equi -
 
 /*
  it fails on large input data sets, since the time complexity is O(n2)
@@ -21,33 +21,33 @@
     //NSLog(@"%@",A);
     NSInteger arrayLength = A.count;
     for(NSInteger i=0;i<arrayLength;i++){
-
+        
         NSMutableArray *rightArray = [NSMutableArray new];
         NSMutableArray *leftArray = [NSMutableArray new];
-
+        
         NSInteger leftsum=0;
         NSInteger rightsum=0;
-
+        
         for (NSInteger j=0; j<i; j++) {
             NSNumber *num =  A[j];
             [leftArray addObject:num];
-
+            
             leftsum +=num.integerValue;
         }
-
-
+        
+        
         for (NSInteger k=i+1; k<arrayLength; k++) {
-             NSNumber *num =  A[k];
-             [rightArray addObject:num];
-
+            NSNumber *num =  A[k];
+            [rightArray addObject:num];
+            
             rightsum +=num.integerValue;
         }
-
-       // NSLog(@"leftSum[%@] = %ld  -- rightsum:[%@] = %ld",leftArray, leftsum,rightArray, rightsum);
+        
+        // NSLog(@"leftSum[%@] = %ld  -- rightsum:[%@] = %ld",leftArray, leftsum,rightArray, rightsum);
         if (rightsum == leftsum) {
             return (int)i;
         }
-
+        
     }
     return -1;
 }
@@ -62,7 +62,7 @@
     for (NSInteger i=0; i<A.count; i++) {
         sum = @(sum.integerValue + ((NSNumber *)A[i]).integerValue);
     }
-
+    
     NSNumber *leftSum = [NSNumber numberWithInt:0];
     NSNumber *rightSum = [NSNumber numberWithInt:0];
     
@@ -73,51 +73,35 @@
         }
         leftSum = @(leftSum.integerValue +((NSNumber *) A[i]).integerValue);
     }
-
-
+    
+    
     return -1;
 }
 
+//https://codility.com/demo/take-sample-test/tape_equilibrium/
+
 +(int) TapeEquilibrium:(NSArray *)A{
     
-   
-    NSDecimalNumber *sum =  [A valueForKeyPath:@"@sum.self"];
-    NSDecimalNumber *leftSum = [NSDecimalNumber decimalNumberWithDecimal:[((NSNumber *) A[0]) decimalValue]];
-    NSDecimalNumber *rightSum = [sum decimalNumberBySubtracting:leftSum];
-    NSDecimalNumber *diff = [leftSum decimalNumberBySubtracting:rightSum];
-    NSDecimalNumber *tempDiff = [NSDecimalNumber zero];
     
-    for (int i=1; i<A.count; i++) {
-        NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithDecimal:[((NSNumber *) A[0]) decimalValue]];
-        leftSum  = [leftSum decimalNumberByAdding:num];
-        rightSum = [sum decimalNumberBySubtracting:leftSum];
-        tempDiff = [leftSum decimalNumberBySubtracting:rightSum];
-        if ([tempDiff compare:diff]==NSOrderedAscending) {
-            diff=tempDiff;
-        }
+    NSDecimalNumber *sumDecimal =  [A valueForKeyPath:@"@sum.self"];
+    int sum = [sumDecimal intValue ];
+    
+    int leftSum = [((NSNumber *) A[0]) intValue];
+    int rightSum = sum-leftSum;
+    int diff = abs(leftSum-rightSum);
+    NSLog(@"%d",diff);
+    
+    for (int i=1; i<A.count-1;i++) {
         
+        int num = [((NSNumber *) A[i]) intValue];
+        leftSum  +=num ;
+        rightSum = sum-leftSum;
+        int tempDiff =abs(leftSum-rightSum);
+        if (tempDiff<diff) diff=tempDiff;
+         NSLog(@"%d",tempDiff);
     }
+    return diff;
 
-//    
-//     NSInteger diff = 0; NSInteger tempDiff = 0;
-//    
-//    for (NSInteger i=0; i<A.count; i++) {
-//        
-//        leftSum = @(leftSum.integerValue +((NSNumber *) A[i]).integerValue);
-//        rightSum = @(sum.integerValue -leftSum.integerValue);
-//        tempDiff = labs(@(leftSum.integerValue - rightSum.integerValue).integerValue);
-//        if (i==0) {
-//            diff = tempDiff;
-//        }else{
-//            if (tempDiff<diff) {
-//                diff=tempDiff;
-//            }
-//        }
-//        
-//        
-//    }
-//    return (int)diff;
-    return 0;
 }
 
 @end

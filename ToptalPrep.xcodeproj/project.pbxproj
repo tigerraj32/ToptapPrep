@@ -91,9 +91,9 @@
 		FCFA58B31C2BFCCC002354A6 /* ToptalPrep */ = {
 			isa = PBXGroup;
 			children = (
+				FCFA58BB1C2BFCED002354A6 /* Lesson 1 */,
 				73FE655B1C34BDB2008F9073 /* Lesson 2 */,
 				73FE65551C3489B2008F9073 /* Lesson 3 */,
-				FCFA58BB1C2BFCED002354A6 /* Lesson 1 */,
 				FCFA58B41C2BFCCC002354A6 /* main.m */,
 			);
 			path = ToptalPrep;
