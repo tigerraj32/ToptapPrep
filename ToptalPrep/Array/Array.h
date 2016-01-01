@@ -11,5 +11,5 @@
 @interface Array : NSObject
 
 +(int) findOddOccurances:(NSArray *) A;
-
++(int) findOddOccurancesNormal:(NSArray *) A;
 @end

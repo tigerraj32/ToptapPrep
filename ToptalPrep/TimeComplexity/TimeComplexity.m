@@ -76,8 +76,48 @@
 
 
     return -1;
+}
+
++(int) TapeEquilibrium:(NSArray *)A{
     
+   
+    NSDecimalNumber *sum =  [A valueForKeyPath:@"@sum.self"];
+    NSDecimalNumber *leftSum = [NSDecimalNumber decimalNumberWithDecimal:[((NSNumber *) A[0]) decimalValue]];
+    NSDecimalNumber *rightSum = [sum decimalNumberBySubtracting:leftSum];
+    NSDecimalNumber *diff = [leftSum decimalNumberBySubtracting:rightSum];
+    NSDecimalNumber *tempDiff = [NSDecimalNumber zero];
     
+    for (int i=1; i<A.count; i++) {
+        NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithDecimal:[((NSNumber *) A[0]) decimalValue]];
+        leftSum  = [leftSum decimalNumberByAdding:num];
+        rightSum = [sum decimalNumberBySubtracting:leftSum];
+        tempDiff = [leftSum decimalNumberBySubtracting:rightSum];
+        if ([tempDiff compare:diff]==NSOrderedAscending) {
+            diff=tempDiff;
+        }
+        
+    }
+
+//    
+//     NSInteger diff = 0; NSInteger tempDiff = 0;
+//    
+//    for (NSInteger i=0; i<A.count; i++) {
+//        
+//        leftSum = @(leftSum.integerValue +((NSNumber *) A[i]).integerValue);
+//        rightSum = @(sum.integerValue -leftSum.integerValue);
+//        tempDiff = labs(@(leftSum.integerValue - rightSum.integerValue).integerValue);
+//        if (i==0) {
+//            diff = tempDiff;
+//        }else{
+//            if (tempDiff<diff) {
+//                diff=tempDiff;
+//            }
+//        }
+//        
+//        
+//    }
+//    return (int)diff;
+    return 0;
 }
 
 @end

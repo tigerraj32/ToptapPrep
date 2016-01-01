@@ -37,24 +37,32 @@ int main(int argc, const char * argv[]) {
          
          */
         
-        
         /*
-         //Lesson 3
-         
-         NSArray *A = @[@(-1),@(3),@(-4),@(5),@(1),@(-6),@(2),@(1)];
-         NSNumber *sum = [A valueForKeyPath:@"@sum.self"];
-         NSLog(@"%@",sum);
-         
-         //solution([A mutableCopy]);
-         NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi_Normal_Solution:[A mutableCopy]]);
-         NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi:A]);
+         //Lesson 2
+         NSArray *A = @[@(3),@(2),@(3),@(2),@(4),@(5),@(6),@(5),@(6)];
+         NSLog(@"%d",[Array findOddOccurances:A]);
          */
         
         
+        //Lesson 3
+        
+        NSArray *A = @[@(-1),@(3),@(-4),@(5),@(1),@(-6),@(2),@(1)];
+        NSNumber *sum = [A valueForKeyPath:@"@sum.self"];
+        NSLog(@"%@",sum);
+        
+        //solution([A mutableCopy]);
+        NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi_Normal_Solution:[A mutableCopy]]);
+        NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi:A]);
+        A = @[@(3),@(1),@(2),@(4),@(3)];
+        NSLog(@"Tape Equilibrium %d",[TimeComplexity TapeEquilibrium:A]);
         
         
-        NSArray *A = @[@(30000000000),@(2),@(30000000000),@(2),@(4),@(5),@(6),@(5),@(6)];
-        NSLog(@"%d",[Array findOddOccurances:A]);
+        
+        
+        
+        
+        
+        
         
         
     }

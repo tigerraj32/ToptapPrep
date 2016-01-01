@@ -13,4 +13,6 @@
 +(int) Equi_Normal_Solution:(NSMutableArray *)A;
 +(int) Equi:(NSArray *) A;
 
++(int) TapeEquilibrium:(NSArray *)A;
+
 @end
