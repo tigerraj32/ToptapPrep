@@ -7,6 +7,7 @@
 //
 
 #import "TimeComplexity.h"
+#include <limits.h>
 
 @implementation TimeComplexity
 
@@ -82,23 +83,29 @@
 
 +(int) TapeEquilibrium:(NSArray *)A{
     
+    //can use but performance degrade by 50 %.
+    //NSDecimalNumber *sumDecimal =  [A valueForKeyPath:@"@sum.self"];
+    int rightSum = 0;
+    for (NSInteger i=0; i<A.count; i++) {
+        int num = [((NSNumber *) A[i]) intValue];
+        rightSum +=num;
+    }
     
-    NSDecimalNumber *sumDecimal =  [A valueForKeyPath:@"@sum.self"];
-    int sum = [sumDecimal intValue ];
     
-    int leftSum = [((NSNumber *) A[0]) intValue];
-    int rightSum = sum-leftSum;
-    int diff = abs(leftSum-rightSum);
-    NSLog(@"%d",diff);
     
-    for (int i=1; i<A.count-1;i++) {
+    int leftSum = 0;
+    int diff = INT_MAX;
+    int tempDiff = 0;
+    
+    for (int i=0; i<A.count-1;i++) {
         
         int num = [((NSNumber *) A[i]) intValue];
         leftSum  +=num ;
-        rightSum = sum-leftSum;
-        int tempDiff =abs(leftSum-rightSum);
+        rightSum = rightSum-num;
+        tempDiff =abs(leftSum-rightSum);
         if (tempDiff<diff) diff=tempDiff;
-         NSLog(@"%d",tempDiff);
+        //printing NSlog will degrade performance by 100%
+        //NSLog(@"%d",tempDiff);
     }
     return diff;
 
