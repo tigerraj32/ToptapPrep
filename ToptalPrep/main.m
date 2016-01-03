@@ -64,7 +64,8 @@ int main(int argc, const char * argv[]) {
         */
         
         //Lesson 4
-        NSArray *A = @[@(1),@(3),@(1),@(4),@(2),@(3),@(5),@(4)];
+        //NSArray *A = @[@(1),@(3),@(1),@(4),@(2),@(3),@(5),@(4)];
+        NSArray *A = @[@(3)];
         NSLog(@"minumum time :%d",[CountingElements FronRiverOne:A andDistance:5]);
         
         

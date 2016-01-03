@@ -19,16 +19,26 @@
 #pragma mark - FrogRiverOne
 //https://codility.com/programmers/task/frog_river_one/
 +(int) FronRiverOne:(NSArray *) A andDistance:(int ) X{
-    for (int i=1; i<A.count; i++) {
-        NSArray *arrr = [A subarrayWithRange:NSMakeRange(0, i)];
-        NSOrderedSet *set = [NSOrderedSet orderedSetWithArray:arrr];
-        //NSLog(@"%@",set);
-          NSInteger last  = [((NSNumber *) [set lastObject]) integerValue];
-        if (last == X) {
-            return i-1;
-        }
-        
+
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:(NSInteger) X];
+    for(int i=0;i<=X;i++){
+        [arr addObject:@(0)];
     }
+    
+    int steps = 0;
+    for (int i=0; i<A.count; i++) {
+       
+        NSNumber *num  = A[i];
+        if ([arr[num.intValue] compare:@(0)]==NSOrderedSame) {
+            steps +=1;
+        }
+        arr[num.intValue]=@(1);
+        
+        if (steps==X) {
+            return i;
+        }
+    }
+    
     return -1;
     
 }
