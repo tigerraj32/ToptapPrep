@@ -15,4 +15,7 @@
 
 +(int) TapeEquilibrium:(NSArray *)A;
 
++(int) PermMissingElem:(NSArray *)A;
+
++(int) FrogJmp:(int) X andY:(int) Y andD:(int) D;
 @end

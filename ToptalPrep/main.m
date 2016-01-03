@@ -10,6 +10,7 @@
 #import "Itration.h"
 #import "TimeComplexity.h"
 #import "Array.h"
+#import "CountingElements.h"
 
 
 
@@ -54,11 +55,17 @@ int main(int argc, const char * argv[]) {
         //solution([A mutableCopy]);
         NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi_Normal_Solution:[A mutableCopy]]);
         NSLog(@"Tape Equilibrium:%d", [TimeComplexity Equi:A]);
-        */
-        NSArray *A = @[@(3),@(1),@(2),@(4),@(3)];
+        
+        
+        NSArray *A = @[@(4),@(3),@(2),@(1),@(6)];
         NSLog(@"Tape Equilibrium %d",[TimeComplexity TapeEquilibrium:A]);
+        NSLog(@"PermMissingElem %d",[TimeComplexity PermMissingElem:A]);
+        NSLog(@"PermMissingElem %d",[TimeComplexity FrogJmp:10 andY:80 andD:30]);
+        */
         
-        
+        //Lesson 4
+        NSArray *A = @[@(1),@(3),@(1),@(4),@(2),@(3),@(5),@(4)];
+        NSLog(@"minumum time :%d",[CountingElements FronRiverOne:A andDistance:5]);
         
         
         

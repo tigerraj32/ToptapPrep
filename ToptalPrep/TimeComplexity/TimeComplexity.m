@@ -79,6 +79,7 @@
     return -1;
 }
 
+#pragma mark - TapeEquilibrium
 //https://codility.com/demo/take-sample-test/tape_equilibrium/
 
 +(int) TapeEquilibrium:(NSArray *)A{
@@ -90,8 +91,6 @@
         int num = [((NSNumber *) A[i]) intValue];
         rightSum +=num;
     }
-    
-    
     
     int leftSum = 0;
     int diff = INT_MAX;
@@ -109,6 +108,32 @@
     }
     return diff;
 
+}
+
+#pragma mark - PermMissingElem
+
+//https://codility.com/demo/take-sample-test/perm_missing_elem/
+
++(int) PermMissingElem:(NSArray *)A{
+    
+    NSUInteger len = A.count+1;
+    NSUInteger sum = (len * (len +1)) /2;
+    
+    for (NSUInteger i=0; i<A.count; i++) {
+        NSUInteger num = [((NSNumber *) A[i]) integerValue];
+        sum -= num;
+    }
+    return (int)sum;
+}
+
+#pragma mark - FrogJmp
+//https://codility.com/demo/take-sample-test/frog_jmp/
++(int) FrogJmp:(int) X andY:(int) Y andD:(int) D{
+    
+    double diff = (double) (Y-X) / D;
+    if (diff>(int)diff)
+        return (int) (diff+1);
+    return (int) diff;
 }
 
 @end

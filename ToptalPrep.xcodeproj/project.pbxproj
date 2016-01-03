@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73B15D811C38B7EC00DCB291 /* CountingElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B15D801C38B7EC00DCB291 /* CountingElements.m */; settings = {ASSET_TAGS = (); }; };
 		73FE65581C3489C7008F9073 /* TimeComplexity.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FE65571C3489C7008F9073 /* TimeComplexity.m */; settings = {ASSET_TAGS = (); }; };
 		73FE655A1C348D58008F9073 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 73FE65591C348D58008F9073 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		73FE655F1C34BDC3008F9073 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FE655E1C34BDC3008F9073 /* Array.m */; settings = {ASSET_TAGS = (); }; };
@@ -28,13 +29,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73B15D7F1C38B7EC00DCB291 /* CountingElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingElements.h; sourceTree = "<group>"; };
+		73B15D801C38B7EC00DCB291 /* CountingElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingElements.m; sourceTree = "<group>"; };
 		73FE65561C3489C7008F9073 /* TimeComplexity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeComplexity.h; sourceTree = "<group>"; };
 		73FE65571C3489C7008F9073 /* TimeComplexity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeComplexity.m; sourceTree = "<group>"; };
 		73FE65591C348D58008F9073 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		73FE655D1C34BDC3008F9073 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		73FE655E1C34BDC3008F9073 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Array.m; sourceTree = "<group>"; };
 		FCFA58B11C2BFCCC002354A6 /* ToptalPrep */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ToptalPrep; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCFA58B41C2BFCCC002354A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCFA58B41C2BFCCC002354A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ToptalPrep/main.m; sourceTree = "<group>"; };
 		FCFA58BC1C2BFD97002354A6 /* Itration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Itration.h; sourceTree = "<group>"; };
 		FCFA58BD1C2BFD97002354A6 /* Itration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Itration.m; sourceTree = "<group>"; };
 		FCFA58BF1C2BFEE4002354A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -51,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B15D7E1C38B7D400DCB291 /* Lesson 4 */ = {
+			isa = PBXGroup;
+			children = (
+				73B15D7F1C38B7EC00DCB291 /* CountingElements.h */,
+				73B15D801C38B7EC00DCB291 /* CountingElements.m */,
+			);
+			name = "Lesson 4";
+			path = CountingElements;
+			sourceTree = "<group>";
+		};
 		73FE65551C3489B2008F9073 /* Lesson 3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFA58B31C2BFCCC002354A6 /* ToptalPrep */,
+				FCFA58B41C2BFCCC002354A6 /* main.m */,
 				FCFA58B21C2BFCCC002354A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +108,7 @@
 				FCFA58BB1C2BFCED002354A6 /* Lesson 1 */,
 				73FE655B1C34BDB2008F9073 /* Lesson 2 */,
 				73FE65551C3489B2008F9073 /* Lesson 3 */,
-				FCFA58B41C2BFCCC002354A6 /* main.m */,
+				73B15D7E1C38B7D400DCB291 /* Lesson 4 */,
 			);
 			path = ToptalPrep;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 				73FE65581C3489C7008F9073 /* TimeComplexity.m in Sources */,
 				FCFA58C01C2BFEE4002354A6 /* README.md in Sources */,
 				73FE655A1C348D58008F9073 /* README.md in Sources */,
+				73B15D811C38B7EC00DCB291 /* CountingElements.m in Sources */,
 				73FE655F1C34BDC3008F9073 /* Array.m in Sources */,
 				FCFA58B51C2BFCCC002354A6 /* main.m in Sources */,
 				FCFA58BE1C2BFD97002354A6 /* Itration.m in Sources */,
